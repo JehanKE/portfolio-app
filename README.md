@@ -4,5 +4,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Libraries Used
 React Icons: https://react-icons.github.io/react-icons/
-Sass: https://sass-lang.com/
-React Reveal: https://www.react-reveal.com/
+<br/>Sass: https://sass-lang.com/
+<br/>React Reveal: https://www.react-reveal.com/
