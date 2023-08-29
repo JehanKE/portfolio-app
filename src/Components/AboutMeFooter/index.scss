@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+.footer-container {
+    background-color: #eaf6f6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #479b9b;
+
+    .footer-text {
+        font-size: 2.5rem;
+        font-family: "Sacramento", cursive;
+    }
+
+    .footer-icons-container {
+        padding-bottom: 20px;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+
+        .footer-icon {
+            font-size: 1.5rem;
+            color: #479b9b;
+            cursor: pointer;
+        }
+    }
+}
