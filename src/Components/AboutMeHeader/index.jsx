@@ -14,7 +14,7 @@ const AboutMeHeader = () => {
             <Fade left>
                 <img src={Cloud} alt='Cloud not found' className='bottom-cloud'/><br/>
             </Fade>
-            <img src={Mountain} alt='Mountain not found' />
+            <img src={Mountain} alt='Mountain not found' className='mountain'/>
         </div>
     )
 }

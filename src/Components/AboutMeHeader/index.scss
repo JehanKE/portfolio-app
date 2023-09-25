@@ -6,8 +6,12 @@
     color: #66BFBF;
 
     .top-cloud {
+        @media (max-width: 1000px) {
+            height: 5%;
+            width: 25%;
+        }
         position: absolute;
-        right: 250px;
+        right: 8%;
         top: 40px;
     }
 
@@ -26,7 +30,19 @@
     }
 
     .bottom-cloud {
+        @media (max-width: 1000px) {
+            height: 5%;
+            width: 25%;
+        }
         position: absolute;
-        left: 250px;
+        left: 8%;
     }
+    
+    .mountain {
+        @media (max-width: 1000px) {
+            height: 90%;
+            width: 90%;
+        }
+    }
+
 }
