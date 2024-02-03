@@ -6,7 +6,7 @@ const AboutMeContent = () => {
             <div className='section-container'>
                 <label className='section-title'>Hello</label>
                 <p className='section-content'>
-                    I'm a web developer with over 2 years of experience in React JS.
+                    I'm a web developer with over 2 years of experience in React JS and Spring Boot.
                     I'm currently working at Lowe's Services India Pvt Ltd.
                 </p>
             </div>
