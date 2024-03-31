@@ -6,7 +6,7 @@ const AboutMeContent = () => {
             <div className='section-container'>
                 <label className='section-title'>Hello</label>
                 <p className='section-content'>
-                    I'm a web developer with over 2 years of experience in React JS and Spring Boot.
+                    I'm a web developer with close to 3 years of experience in React JS and Spring Boot.
                     I'm currently working at Lowe's Services India Pvt Ltd.
                 </p>
             </div>
@@ -21,7 +21,7 @@ const AboutMeContent = () => {
                     />
                     <p className='section-content'>
                     Proficient in React JS, JavaScript, TypeScript, CSS, Redux, HTML, Jest, Cypress, 
-                    SQL, RESTful APIs, Agile workflow.
+                    SQL, Java, Kafka, MongoDb, RESTful APIs and Agile workflow.
                     </p>
                 </div>
             </div>
@@ -45,6 +45,9 @@ const AboutMeContent = () => {
             <hr/>
             <div className='section-container'>
                 <label className='section-title'>About Me</label>
+                <p className='section-content'>
+                    Currently driving ideation, design, creation and testing of web applications at Lowe's as a full stack developer.
+                </p>
                 <p className='section-content'>
                     A sneaker craze, a sports addiction and a love for technology and software make me part of a rare
                     breed of outgoing geeks. 
