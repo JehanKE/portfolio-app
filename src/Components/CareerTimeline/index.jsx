@@ -9,11 +9,15 @@ import {
 } from '@mui/lab';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import SchoolIcon from '@mui/icons-material/School';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 
 const CareerTimeline = () => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
-        <Timeline>
+        <Timeline position={isMobile ? 'right' : 'alternate'}>
              <TimelineItem>
                 <TimelineOppositeContent
                     sx={{ m: 'auto 0' }}
