@@ -4,6 +4,7 @@
 .header-container {
     background-color: #eaf6f6;
     color: #66BFBF;
+    overflow-x: hidden;
 
     .top-cloud {
         @media (max-width: 1000px) {
@@ -13,12 +14,13 @@
         position: absolute;
         right: 8%;
         top: 40px;
+        animation: drift 20s linear infinite alternate;
     }
 
     .header-introduction {
         padding-top: 50px;
         font-size: 5.65rem;
-        margin: 50px auto 0 auto;
+        margin: 40px auto 0 auto;
         font-family: "Sacramento", cursive;
     }
 
@@ -27,6 +29,7 @@
         font-size: 2.5rem;
         font-weight: normal;
         padding-bottom: 10px;
+        margin: 0;
     }
 
     .bottom-cloud {
@@ -36,6 +39,7 @@
         }
         position: absolute;
         left: 8%;
+        animation: drift 25s linear infinite alternate;
     }
     
     .mountain {
@@ -45,4 +49,13 @@
         }
     }
 
+}
+
+@keyframes drift {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(100px);
+    }
 }

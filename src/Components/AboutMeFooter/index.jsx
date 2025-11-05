@@ -1,4 +1,5 @@
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Fade from 'react-reveal/Fade';
 import './index.scss';
 
@@ -11,8 +12,8 @@ const AboutMeFooter = () => {
                     <a href="https://github.com/JehanKE" target="_blank" rel="noreferrer">
                         <FaGithub className="footer-icon"/>
                     </a>
-                    <a href="https://twitter.com/JehanKE" target="_blank" rel="noreferrer">
-                        <FaTwitter className="footer-icon"/>
+                    <a href="https://x.com/JehanKE" target="_blank" rel="noreferrer">
+                        <FaXTwitter className="footer-icon"/>
                     </a>
                     <a href="https://www.instagram.com/jehan_ke/" target="_blank" rel="noreferrer">
                         <FaInstagram className="footer-icon"/>

@@ -6,3 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 React Icons: https://react-icons.github.io/react-icons/
 <br/>Sass: https://sass-lang.com/
 <br/>React Reveal: https://www.react-reveal.com/
+<br/>Material UI: https://mui.com/
+
+# Deployed Using
+Vercel: https://vercel.com/

@@ -23,6 +23,11 @@
             font-size: 1.5rem;
             color: #479b9b;
             cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+            }
         }
     }
 }
