@@ -244,8 +244,8 @@ export const projectsData = [
       { label: "Deployment", value: "Vercel Edge" }
     ],
     links: {
-      live: "https://portfolio-app-jehan.vercel.app", // link to project or live demo
-      github: "https://github.com/JehanKE"
+      live: "https://chat-bot-ten-peach.vercel.app/",
+      github: "https://github.com/JehanKE/chat-bot"
     }
   },
   {
@@ -263,26 +263,8 @@ export const projectsData = [
       { label: "Deployment", value: "Automated CI/CD" }
     ],
     links: {
-      live: "https://portfolio-app-jehan.vercel.app",
-      github: "https://github.com/JehanKE"
-    }
-  },
-  {
-    id: "enterprise-supply-chain-engine",
-    title: "Enterprise Replenishment & Stock Engine",
-    badge: "Enterprise Scale Architecture",
-    summary:
-      "High-throughput event-driven microservices architecture handling automated store replenishment, multi-tier SKU hierarchy lookups, and regional stock allocations.",
-    description:
-      "Engineered full-stack enterprise inventory allocation and regional stock management platform. Developed high-throughput event-driven microservices using Spring Boot and Apache Kafka for automated replenishment. Integrated PostgreSQL for transactional persistence and Redis caching to accelerate read-heavy inventory lookups, paired with nested infinite-scrolling React data tables.",
-    tags: ["Spring Boot", "Apache Kafka", "PostgreSQL", "Redis", "AG Grid", "React", "Grafana"],
-    metrics: [
-      { label: "Throughput", value: "Millions of Daily Events" },
-      { label: "Lookup Speed", value: "Sub-Second Caching" },
-      { label: "Observability", value: "Full Grafana Telemetry" }
-    ],
-    links: {
-      caseStudy: "#experience"
+      live: "https://portfolio-app-nine-phi.vercel.app/",
+      github: "https://github.com/JehanKE/portfolio-app"
     }
   }
 ];

@@ -2,15 +2,21 @@
   position: relative;
 
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    max-width: 1120px;
+    margin: 0 auto;
 
     .project-card {
+      flex: 1 1 440px;
+      max-width: 540px;
+      width: 100%;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 16px;
-      padding: 30px;
+      padding: 32px;
       display: flex;
       flex-direction: column;
       gap: 18px;
@@ -170,8 +176,12 @@
 @media (max-width: 1024px) {
   .projects-section {
     .projects-grid {
-      grid-template-columns: 1fr;
       gap: 24px;
+
+      .project-card {
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
     }
   }
 }

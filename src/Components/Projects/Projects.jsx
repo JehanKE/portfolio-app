@@ -29,7 +29,7 @@ const Projects = () => {
     <section id="projects" className="section projects-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Featured Implementations</span>
+          <span className="section-tag">Projects</span>
           <h2 className="section-title">
             Featured <span className="gradient-text">Projects & Systems</span>
           </h2>
