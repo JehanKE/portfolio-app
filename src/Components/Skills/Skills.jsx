@@ -44,9 +44,8 @@ const Skills = () => {
       const filteredSkills = cat.skills.filter((skill) => {
         const query = searchQuery.toLowerCase().trim();
         if (!query) return true;
-        const inName = skill.name.toLowerCase().includes(query);
-        const inTags = skill.tags && skill.tags.some((t) => t.toLowerCase().includes(query));
-        return inName || inTags;
+        const skillName = typeof skill === 'string' ? skill : skill.name;
+        return skillName.toLowerCase().includes(query);
       });
       return { ...cat, skills: filteredSkills };
     })
@@ -56,7 +55,7 @@ const Skills = () => {
     <section id="skills" className="section skills-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">03 // Technical Stack</span>
+          <span className="section-tag">Technical Stack</span>
           <h2 className="section-title">
             Skills & <span className="gradient-text">Technologies</span>
           </h2>
@@ -113,24 +112,15 @@ const Skills = () => {
               </div>
 
               <div className="skills-items-grid">
-                {cat.skills.map((skill, sIdx) => (
-                  <div key={sIdx} className="skill-card">
-                    <div className="skill-top">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className={`skill-level level-${skill.level.toLowerCase()}`}>{skill.level}</span>
+                {cat.skills.map((skill, sIdx) => {
+                  const skillName = typeof skill === 'string' ? skill : skill.name;
+                  return (
+                    <div key={sIdx} className="skill-pill-card">
+                      <span className="skill-dot"></span>
+                      <span className="skill-name">{skillName}</span>
                     </div>
-
-                    {skill.tags && (
-                      <div className="skill-tags">
-                        {skill.tags.map((tag, tIdx) => (
-                          <span key={tIdx} className="skill-tag-item">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}

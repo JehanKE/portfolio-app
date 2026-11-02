@@ -142,88 +142,67 @@ export const experienceData = [
 
 export const skillCategories = [
   {
+    category: "Languages",
+    icon: "code",
+    skills: ["Java", "JavaScript (ES6+)", "TypeScript", "SQL"]
+  },
+  {
     category: "Frontend Architecture",
     icon: "code",
     skills: [
-      { name: "React.js", level: "Expert", tags: ["Virtual DOM", "Hooks", "Context", "Custom Hooks"] },
-      { name: "Next.js", level: "Advanced", tags: ["SSR", "SSG", "App Router"] },
-      { name: "TypeScript", level: "Advanced", tags: ["Type Safety", "Generics", "Interfaces"] },
-      { name: "JavaScript (ES6+)", level: "Expert", tags: ["Async/Await", "Event Loop", "Closures"] },
-      { name: "Redux & State", level: "Expert", tags: ["Redux Toolkit", "Thunks", "Selectors"] },
-      { name: "AG Grid", level: "Advanced", tags: ["Virtual Scrolling", "Large Datasets", "Custom Renderers"] },
-      { name: "Storybook", level: "Advanced", tags: ["Design Systems", "Component Docs", "Visual Regression"] },
-      { name: "HTML5 & CSS3/SCSS", level: "Expert", tags: ["Flexbox", "CSS Grid", "Responsive Design", "Animations"] },
-      { name: "Micro Frontends", level: "Advanced", tags: ["Module Federation", "Isolated Deployments"] },
-      { name: "React Router", level: "Expert", tags: ["Dynamic Routing", "Guards", "Data Loaders"] }
+      "React.js",
+      "Next.js",
+      "Redux",
+      "HTML5 & CSS3/SCSS",
+      "React Router",
+      "AG Grid",
+      "Storybook",
+      "Micro Frontend Architecture"
     ]
   },
   {
     category: "Backend & Distributed Systems",
     icon: "server",
     skills: [
-      { name: "Spring Boot", level: "Expert", tags: ["Microservices", "Dependency Injection", "Actuator"] },
-      { name: "Java (8/11/17)", level: "Expert", tags: ["Streams", "Multithreading", "OOP", "Concurrency"] },
-      { name: "Apache Kafka", level: "Advanced", tags: ["Event Streaming", "Producers/Consumers", "Partitions"] },
-      { name: "Event-Driven Arch", level: "Advanced", tags: ["Pub/Sub", "Decoupled Pipelines", "Async Tasks"] },
-      { name: "RESTful APIs", level: "Expert", tags: ["API Design", "HATEOAS", "Versioning", "OpenAPI"] },
-      { name: "GraphQL", level: "Intermediate", tags: ["Schema Design", "Resolvers", "Queries/Mutations"] },
-      { name: "Spring Batch", level: "Advanced", tags: ["Chunk Processing", "Job Scheduling", "ETL"] },
-      { name: "Hibernate / JPA", level: "Advanced", tags: ["ORM", "Query Optimization", "Lazy Loading"] }
+      "Spring Boot",
+      "Spring Batch",
+      "Hibernate / JPA",
+      "REST APIs",
+      "GraphQL",
+      "Microservices",
+      "Apache Kafka",
+      "Event-Driven Architecture"
     ]
   },
   {
     category: "Databases & Caching",
     icon: "database",
-    skills: [
-      { name: "PostgreSQL", level: "Advanced", tags: ["Indexes", "ACID", "Query Optimization", "JSONB"] },
-      { name: "Redis", level: "Advanced", tags: ["Distributed Caching", "Key-Value", "TTL", "Pub/Sub"] },
-      { name: "MySQL", level: "Advanced", tags: ["Relational Schema", "Transactions", "Stored Procedures"] },
-      { name: "MongoDB", level: "Intermediate", tags: ["Document Store", "Aggregation Pipelines", "Indexing"] },
-      { name: "SQL & Query Tuning", level: "Advanced", tags: ["Execution Plans", "Joins", "Partitioning"] }
-    ]
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQL & Query Tuning"]
   },
   {
-    category: "DevOps & CI/CD",
+    category: "DevOps & IaC",
     icon: "cloud",
-    skills: [
-      { name: "Docker", level: "Advanced", tags: ["Containerization", "Multi-Stage Builds", "Docker Compose"] },
-      { name: "ArgoCD", level: "Intermediate", tags: ["GitOps", "Kubernetes Sync", "Automated Rollouts"] },
-      { name: "Jenkins", level: "Advanced", tags: ["CI/CD Pipelines", "Groovy Scripts", "Automated Builds"] },
-      { name: "CI/CD Automation", level: "Advanced", tags: ["Pipeline Optimization", "Quality Gates"] },
-      { name: "Vercel", level: "Advanced", tags: ["Edge Functions", "Automated Deployments", "Preview Envs"] }
-    ]
+    skills: ["Docker", "ArgoCD", "Jenkins", "CI/CD", "Vercel"]
   },
   {
-    category: "Observability & SRE",
+    category: "Observability & Telemetry",
     icon: "chart",
-    skills: [
-      { name: "Grafana", level: "Advanced", tags: ["Custom Dashboards", "Alerting", "SLA Monitoring"] },
-      { name: "Prometheus", level: "Advanced", tags: ["Metrics Collection", "PromQL", "Scraping"] },
-      { name: "Kibana", level: "Intermediate", tags: ["Log Analysis", "Elasticsearch Queries"] },
-      { name: "Session Replay", level: "Advanced", tags: ["Telemetry", "User Journey Debugging", "Error Tracing"] },
-      { name: "Telemetry Pipelines", level: "Advanced", tags: ["Clickstream", "Client Performance", "Core Web Vitals"] }
-    ]
+    skills: ["Grafana", "Prometheus", "Kibana", "Session Replay", "Client-Side Telemetry"]
   },
   {
-    category: "Testing, Quality & Security",
+    category: "Quality, Testing & Security",
     icon: "shield",
-    skills: [
-      { name: "Cypress", level: "Expert", tags: ["E2E Testing", "Component Testing", "CI Test Runs"] },
-      { name: "Playwright", level: "Advanced", tags: ["Cross-Browser", "Parallel Execution", "Automated Traces"] },
-      { name: "Jest", level: "Expert", tags: ["Unit Tests", "Snapshots", "Mocking"] },
-      { name: "JUnit & Mockito", level: "Advanced", tags: ["Java Unit Testing", "Mocking", "Test Coverage"] },
-      { name: "Snyk Security", level: "Advanced", tags: ["Vulnerability Remediation", "Dependency Auditing"] }
-    ]
+    skills: ["Cypress", "Playwright", "Jest", "JUnit", "Mockito", "Snyk Security"]
   },
   {
     category: "AI & Developer Tooling",
     icon: "bot",
     skills: [
-      { name: "LLM Integration", level: "Advanced", tags: ["Claude", "OpenAI GPT", "Google Gemini API"] },
-      { name: "Streaming APIs", level: "Advanced", tags: ["Server-Sent Events", "Token Streaming", "Rate Limiting"] },
-      { name: "GitHub Copilot", level: "Expert", tags: ["AI-Assisted Workflows", "Prompting", "Code Acceleration"] },
-      { name: "Git & Version Control", level: "Expert", tags: ["Branching Strategies", "Interactive Rebase", "Hooks"] },
-      { name: "System Design", level: "Advanced", tags: ["Scalability", "High Availability", "Microservices"] }
+      "LLM Integration (Claude, GPT, Gemini)",
+      "GitHub Copilot",
+      "Git & GitHub",
+      "Bitbucket & Jira",
+      "System Design & Code Reviews"
     ]
   }
 ];
