@@ -1,0 +1,320 @@
+.experience-section {
+  position: relative;
+
+  /* Ladder Card */
+  .company-ladder-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-md);
+
+    .company-ladder-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-color-subtle);
+
+      .company-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .company-logo-badge {
+          width: 52px;
+          height: 52px;
+          border-radius: 12px;
+          background: #004990; // Lowe's Signature Blue
+          color: #ffffff;
+          font-weight: 800;
+          font-size: 1.6rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 14px rgba(0, 73, 144, 0.4);
+        }
+
+        .company-name {
+          font-size: 1.5rem;
+          font-weight: 800;
+          color: var(--text-primary);
+          line-height: 1.2;
+        }
+
+        .company-meta {
+          display: flex;
+          gap: 16px;
+          font-size: 0.88rem;
+          color: var(--text-secondary);
+          margin-top: 4px;
+
+          span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+          }
+        }
+      }
+
+      .ladder-tag {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--accent-emerald);
+        background: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.25);
+        padding: 6px 14px;
+        border-radius: 9999px;
+      }
+    }
+
+    /* Ladder Steps */
+    .ladder-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      position: relative;
+
+      .ladder-step {
+        display: flex;
+        gap: 16px;
+        position: relative;
+
+        .step-indicator {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .step-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            border: 3px solid var(--bg-card-solid);
+            box-shadow: 0 0 0 2px var(--border-color);
+            margin-top: 4px;
+            transition: all 0.2s ease;
+          }
+
+          .step-line {
+            display: none; // in desktop grid
+          }
+        }
+
+        &.step-current .step-indicator .step-dot {
+          background: #10b981;
+          box-shadow: 0 0 0 2px #10b981, 0 0 10px #10b981;
+        }
+
+        .step-content {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          .step-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            .step-title {
+              font-size: 1.05rem;
+              font-weight: 700;
+              color: var(--text-primary);
+            }
+
+            .step-badge {
+              font-size: 0.72rem;
+              font-weight: 700;
+              padding: 2px 8px;
+              border-radius: 4px;
+              background: var(--bg-badge);
+              color: var(--text-accent);
+
+              &.badge-current {
+                background: rgba(16, 185, 129, 0.15);
+                color: #10b981;
+              }
+            }
+          }
+
+          .step-period {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+          }
+
+          .step-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+
+  /* Filter Bar */
+  .experience-filter-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 32px;
+
+    .filter-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      .filter-btn {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-secondary);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: var(--text-primary);
+          border-color: var(--border-color-hover);
+        }
+
+        &.active {
+          background: var(--accent-gradient);
+          color: #ffffff;
+          border-color: transparent;
+          box-shadow: 0 4px 14px var(--accent-glow);
+        }
+      }
+    }
+  }
+
+  /* Initiatives Grid */
+  .initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    .initiative-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: var(--border-color-hover);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .initiative-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .initiative-cat {
+          font-family: var(--font-mono);
+          font-size: 0.75rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: var(--text-accent);
+          background: var(--bg-badge);
+          padding: 4px 10px;
+          border-radius: 6px;
+        }
+
+        .initiative-impact {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.78rem;
+          font-weight: 700;
+          color: var(--accent-emerald);
+
+          .bolt-icon {
+            font-size: 0.85rem;
+          }
+        }
+      }
+
+      .initiative-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        line-height: 1.35;
+      }
+
+      .initiative-desc {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.65;
+        flex-grow: 1;
+      }
+
+      .initiative-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border-color-subtle);
+
+        .skill-pill {
+          font-size: 0.76rem;
+          font-weight: 600;
+          color: var(--text-secondary);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
+          padding: 3px 10px;
+          border-radius: 9999px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .experience-section {
+    .company-ladder-card {
+      .company-ladder-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .ladder-steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .initiatives-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+

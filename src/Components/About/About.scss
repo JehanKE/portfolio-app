@@ -1,0 +1,226 @@
+.about-section {
+  background-color: var(--bg-secondary);
+  position: relative;
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* Left Column */
+  .about-narrative {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .narrative-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--border-color-hover);
+    }
+
+    .narrative-heading {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .narrative-icon {
+        color: var(--accent-cyan);
+      }
+    }
+
+    .narrative-text {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 16px;
+
+      strong {
+        color: var(--text-primary);
+      }
+    }
+
+    .narrative-highlights {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color-subtle);
+
+      .highlights-title {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-accent);
+        margin-bottom: 14px;
+      }
+
+      .highlights-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          font-size: 0.95rem;
+          color: var(--text-primary);
+          line-height: 1.4;
+
+          .check-icon {
+            color: var(--accent-emerald);
+            font-size: 0.9rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+
+  /* Personality Card */
+  .personality-card {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.07) 0%, rgba(139, 92, 246, 0.07) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px 28px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--border-color-hover);
+      transform: translateY(-2px);
+    }
+
+    .personality-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+
+      .personality-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--accent-amber);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .sneaker-emoji {
+        font-size: 1.2rem;
+      }
+    }
+
+    .personality-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .personality-text {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+  }
+
+  /* Right Column: Pillars */
+  .about-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .pillars-heading {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .pillars-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s ease;
+
+      &:hover {
+        border-color: var(--border-color-hover);
+        transform: translateX(4px);
+        background: var(--bg-card-hover);
+      }
+
+      .pillar-icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: var(--bg-badge);
+        border: 1px solid var(--border-color);
+        color: var(--accent-cyan);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+
+      .pillar-content {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .pillar-title {
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: var(--text-primary);
+        }
+
+        .pillar-desc {
+          font-size: 0.92rem;
+          color: var(--text-secondary);
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about-section {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+}
+
