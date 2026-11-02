@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   FaCalendarAlt,
   FaMapMarkerAlt,
@@ -8,36 +8,18 @@ import { experienceData } from '../../data/portfolioData';
 import './Experience.scss';
 
 const Experience = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
   const lowes = experienceData[0];
-
-  const categories = [
-    'All',
-    'Frontend Architecture',
-    'Distributed Backend',
-    'Observability & SRE',
-    'Performance Engineering',
-    'Quality & Security'
-  ];
-
-  const filteredAchievements = lowes.achievements.filter((item) => {
-    if (activeCategory === 'All') return true;
-    if (activeCategory === 'Distributed Backend') {
-      return item.category === 'Distributed Backend' || item.category === 'Full-Stack Systems';
-    }
-    return item.category === activeCategory;
-  });
 
   return (
     <section id="experience" className="section experience-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">02 // Career & Track Record</span>
+          <span className="section-tag">Career & Experience</span>
           <h2 className="section-title">
-            Enterprise Experience at <span className="gradient-text">Lowe's India</span>
+            Enterprise <span className="gradient-text">Experience</span>
           </h2>
           <p className="section-subtitle">
-            5 years of technical ownership across high-scale supply chain platforms, event-driven pipelines, and client telemetry.
+            5 years of technical ownership across high-scale supply chain platforms, event-driven pipelines and distributed systems.
           </p>
         </div>
 
@@ -58,7 +40,6 @@ const Experience = () => {
                 </div>
               </div>
             </div>
-            <div className="ladder-tag">Promoted Across 3 Tiers</div>
           </div>
 
           <div className="ladder-steps">
@@ -81,25 +62,9 @@ const Experience = () => {
           </div>
         </div>
 
-        {/* Category Filters */}
-        <div className="experience-filter-bar">
-          <span className="filter-label">Filter Achievements:</span>
-          <div className="filter-buttons">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className={`filter-btn ${activeCategory === cat ? 'active' : ''}`}
-                onClick={() => setActiveCategory(cat)}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Initiatives Grid */}
         <div className="initiatives-grid">
-          {filteredAchievements.map((item, idx) => (
+          {lowes.achievements.map((item, idx) => (
             <div key={idx} className="initiative-card">
               <div className="initiative-top">
                 <span className="initiative-cat">{item.category}</span>

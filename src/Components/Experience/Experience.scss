@@ -59,30 +59,18 @@
           }
         }
       }
-
-      .ladder-tag {
-        font-family: var(--font-mono);
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: var(--accent-emerald);
-        background: rgba(16, 185, 129, 0.12);
-        border: 1px solid rgba(16, 185, 129, 0.25);
-        padding: 6px 14px;
-        border-radius: 9999px;
-      }
     }
 
     /* Ladder Steps */
     .ladder-steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 18px;
       position: relative;
 
       .ladder-step {
         display: flex;
-        gap: 16px;
+        gap: 10px;
         position: relative;
 
         .step-indicator {
@@ -119,22 +107,25 @@
           .step-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
+            gap: 8px;
+            flex-wrap: nowrap;
 
             .step-title {
-              font-size: 1.05rem;
+              font-size: 0.95rem;
               font-weight: 700;
               color: var(--text-primary);
+              white-space: nowrap;
             }
 
             .step-badge {
-              font-size: 0.72rem;
+              font-size: 0.68rem;
               font-weight: 700;
-              padding: 2px 8px;
+              padding: 2px 6px;
               border-radius: 4px;
               background: var(--bg-badge);
               color: var(--text-accent);
+              white-space: nowrap;
+              flex-shrink: 0;
 
               &.badge-current {
                 background: rgba(16, 185, 129, 0.15);
@@ -155,53 +146,6 @@
             color: var(--text-secondary);
             line-height: 1.5;
           }
-        }
-      }
-    }
-  }
-
-  /* Filter Bar */
-  .experience-filter-bar {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-bottom: 32px;
-
-    .filter-label {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-    }
-
-    .filter-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-
-      .filter-btn {
-        background: var(--bg-card);
-        border: 1px solid var(--border-color);
-        color: var(--text-secondary);
-        padding: 8px 16px;
-        border-radius: 8px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        &:hover {
-          color: var(--text-primary);
-          border-color: var(--border-color-hover);
-        }
-
-        &.active {
-          background: var(--accent-gradient);
-          color: #ffffff;
-          border-color: transparent;
-          box-shadow: 0 4px 14px var(--accent-glow);
         }
       }
     }
