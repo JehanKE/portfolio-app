@@ -8,46 +8,50 @@
     border-radius: 16px;
     padding: 32px;
     margin-bottom: 40px;
-    backdrop-filter: blur(12px);
-    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: var(--shadow-md), var(--card-inner-highlight);
 
     .company-ladder-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 32px;
-      padding-bottom: 24px;
+      margin-bottom: 28px;
+      padding-bottom: 22px;
       border-bottom: 1px solid var(--border-color-subtle);
 
       .company-info {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 18px;
 
         .company-logo-badge {
-          width: 52px;
-          height: 52px;
+          width: 54px;
+          height: 54px;
           border-radius: 12px;
           background: #004990; // Lowe's Signature Blue
           color: #ffffff;
           font-weight: 800;
-          font-size: 1.6rem;
+          font-size: 1.65rem;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 4px 14px rgba(0, 73, 144, 0.4);
+          box-shadow: 0 4px 16px rgba(0, 73, 144, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          flex-shrink: 0;
         }
 
         .company-name {
-          font-size: 1.5rem;
+          font-size: 1.55rem;
           font-weight: 800;
           color: var(--text-primary);
           line-height: 1.2;
+          letter-spacing: -0.02em;
         }
 
         .company-meta {
           display: flex;
-          gap: 16px;
+          gap: 18px;
           font-size: 0.88rem;
           color: var(--text-secondary);
           margin-top: 4px;
@@ -65,18 +69,30 @@
     .ladder-steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 16px;
       position: relative;
 
       .ladder-step {
         display: flex;
-        gap: 10px;
+        gap: 12px;
         position: relative;
+        padding: 16px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border-color-subtle);
+        transition: var(--transition-smooth);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.035);
+          border-color: var(--border-color);
+        }
 
         .step-indicator {
           display: flex;
           flex-direction: column;
           align-items: center;
+          flex-shrink: 0;
+          position: relative;
 
           .step-dot {
             width: 14px;
@@ -85,24 +101,34 @@
             background: var(--text-muted);
             border: 3px solid var(--bg-card-solid);
             box-shadow: 0 0 0 2px var(--border-color);
-            margin-top: 4px;
+            margin-top: 3px;
             transition: all 0.2s ease;
           }
 
           .step-line {
-            display: none; // in desktop grid
+            display: none;
+            width: 2px;
+            flex-grow: 1;
+            background: var(--border-color);
+            margin-top: 6px;
           }
         }
 
-        &.step-current .step-indicator .step-dot {
-          background: #10b981;
-          box-shadow: 0 0 0 2px #10b981, 0 0 10px #10b981;
+        &.step-current {
+          background: rgba(16, 185, 129, 0.035);
+          border-color: rgba(16, 185, 129, 0.22);
+
+          .step-indicator .step-dot {
+            background: #10b981;
+            box-shadow: 0 0 0 2px #10b981, 0 0 10px #10b981;
+          }
         }
 
         .step-content {
           display: flex;
           flex-direction: column;
           gap: 4px;
+          min-width: 0;
 
           .step-header {
             display: flex;
@@ -111,40 +137,44 @@
             flex-wrap: nowrap;
 
             .step-title {
-              font-size: 0.95rem;
+              font-size: 0.92rem;
               font-weight: 700;
               color: var(--text-primary);
               white-space: nowrap;
+              letter-spacing: -0.01em;
             }
 
             .step-badge {
+              font-family: var(--font-mono);
               font-size: 0.68rem;
               font-weight: 700;
-              padding: 2px 6px;
-              border-radius: 4px;
+              padding: 2px 7px;
+              border-radius: 9999px;
               background: var(--bg-badge);
               color: var(--text-accent);
+              border: 1px solid var(--border-color);
               white-space: nowrap;
               flex-shrink: 0;
 
               &.badge-current {
                 background: rgba(16, 185, 129, 0.15);
                 color: #10b981;
+                border-color: rgba(16, 185, 129, 0.3);
               }
             }
           }
 
           .step-period {
             font-family: var(--font-mono);
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
           }
 
           .step-desc {
-            font-size: 0.88rem;
+            font-size: 0.86rem;
             color: var(--text-secondary);
-            line-height: 1.5;
+            line-height: 1.55;
           }
         }
       }
@@ -165,13 +195,33 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      backdrop-filter: blur(12px);
-      transition: all 0.3s ease;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-sm), var(--card-inner-highlight);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
 
       &:hover {
         border-color: var(--border-color-hover);
         transform: translateY(-3px);
-        box-shadow: var(--shadow-md);
+        box-shadow: var(--shadow-md), 0 0 24px -6px rgba(56, 189, 248, 0.16);
+
+        &::before {
+          opacity: 1;
+        }
       }
 
       .initiative-top {
@@ -183,11 +233,13 @@
 
         .initiative-cat {
           font-family: var(--font-mono);
-          font-size: 0.75rem;
+          font-size: 0.74rem;
           font-weight: 600;
           text-transform: uppercase;
+          letter-spacing: 0.05em;
           color: var(--text-accent);
           background: var(--bg-badge);
+          border: 1px solid var(--border-color);
           padding: 4px 10px;
           border-radius: 6px;
         }
@@ -201,7 +253,7 @@
           color: var(--accent-emerald);
 
           .bolt-icon {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
           }
         }
       }
@@ -211,37 +263,45 @@
         font-weight: 700;
         color: var(--text-primary);
         line-height: 1.35;
+        letter-spacing: -0.015em;
       }
 
       .initiative-desc {
-        font-size: 0.95rem;
+        font-size: 0.94rem;
         color: var(--text-secondary);
-        line-height: 1.65;
+        line-height: 1.68;
         flex-grow: 1;
       }
 
       .initiative-skills {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
-        padding-top: 12px;
+        gap: 7px;
+        padding-top: 14px;
         border-top: 1px solid var(--border-color-subtle);
 
         .skill-pill {
-          font-size: 0.76rem;
-          font-weight: 600;
+          font-size: 0.74rem;
+          font-weight: 500;
           color: var(--text-secondary);
-          background: var(--bg-secondary);
+          background: rgba(255, 255, 255, 0.03);
           border: 1px solid var(--border-color);
           padding: 3px 10px;
           border-radius: 9999px;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: var(--text-primary);
+            border-color: var(--border-color-hover);
+            background: var(--bg-badge);
+          }
         }
       }
     }
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .experience-section {
     .company-ladder-card {
       .company-ladder-header {
@@ -252,7 +312,15 @@
 
       .ladder-steps {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
+
+        .ladder-step {
+          .step-indicator {
+            .step-line {
+              display: block;
+            }
+          }
+        }
       }
     }
 
@@ -261,4 +329,3 @@
     }
   }
 }
-

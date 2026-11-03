@@ -22,25 +22,30 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      backdrop-filter: blur(12px);
-      transition: all 0.25s ease;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-sm), var(--card-inner-highlight);
+      transition: var(--transition-smooth);
 
       &:hover {
         border-color: var(--border-color-hover);
         transform: translateY(-2px);
+        box-shadow: var(--shadow-md), var(--card-inner-highlight);
       }
 
       .contact-card-icon {
         width: 46px;
         height: 46px;
         border-radius: 12px;
-        background: var(--bg-badge);
+        background: rgba(56, 189, 248, 0.08);
+        border: 1px solid rgba(56, 189, 248, 0.22);
         color: var(--accent-cyan);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.25rem;
         flex-shrink: 0;
+        box-shadow: var(--card-inner-highlight);
       }
 
       .contact-card-details {
@@ -54,11 +59,11 @@
           font-weight: 600;
           text-transform: uppercase;
           color: var(--text-muted);
-          letter-spacing: 0.05em;
+          letter-spacing: 0.08em;
         }
 
         .contact-value {
-          font-size: 1.05rem;
+          font-size: 1.02rem;
           font-weight: 700;
           color: var(--text-primary);
           text-decoration: none;
@@ -72,10 +77,10 @@
       }
 
       .copy-action-btn {
-        width: 36px;
-        height: 36px;
-        border-radius: 8px;
-        background: var(--bg-secondary);
+        width: 38px;
+        height: 38px;
+        border-radius: 9px;
+        background: rgba(255, 255, 255, 0.03);
         border: 1px solid var(--border-color);
         color: var(--text-secondary);
         display: flex;
@@ -83,11 +88,12 @@
         justify-content: center;
         cursor: pointer;
         font-size: 0.95rem;
-        transition: all 0.2s ease;
+        transition: var(--transition-smooth);
 
         &:hover {
           color: var(--accent-cyan);
           border-color: var(--border-color-hover);
+          background: var(--bg-badge);
         }
 
         .copied-icon {
@@ -102,6 +108,9 @@
       border: 1px solid var(--border-color);
       border-radius: 14px;
       padding: 22px 24px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-sm), var(--card-inner-highlight);
       margin-top: 4px;
 
       .socials-box-title {
@@ -110,7 +119,7 @@
         font-size: 0.78rem;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.08em;
         color: var(--text-muted);
         margin-bottom: 14px;
       }
@@ -118,32 +127,37 @@
       .socials-grid-btns {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 12px;
 
         .social-network-btn {
           display: flex;
           align-items: center;
           gap: 10px;
-          padding: 10px 16px;
-          background: var(--bg-secondary);
+          padding: 12px 18px;
+          background: rgba(255, 255, 255, 0.03);
           border: 1px solid var(--border-color);
           border-radius: 10px;
           color: var(--text-primary);
           font-size: 0.88rem;
           font-weight: 600;
           text-decoration: none;
-          transition: all 0.2s ease;
+          box-shadow: var(--card-inner-highlight);
+          transition: var(--transition-smooth);
 
           &:hover {
             border-color: var(--border-color-hover);
             transform: translateY(-2px);
+            background: var(--bg-card-hover);
           }
 
           &.linkedin:hover {
-            color: #0077b5;
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, 0.4);
           }
+
           &.github:hover {
             color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.3);
           }
         }
       }
@@ -157,20 +171,23 @@
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 32px;
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-md);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-md), var(--card-inner-highlight);
 
       .form-card-title {
         font-size: 1.35rem;
         font-weight: 800;
         color: var(--text-primary);
         margin-bottom: 6px;
+        letter-spacing: -0.015em;
       }
 
       .form-card-subtitle {
         font-size: 0.92rem;
         color: var(--text-secondary);
         margin-bottom: 24px;
+        line-height: 1.55;
       }
 
       .contact-form {
@@ -197,14 +214,15 @@
 
           input,
           textarea {
-            padding: 12px 14px;
-            background: var(--bg-secondary);
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
             border-radius: 10px;
             color: var(--text-primary);
             font-family: var(--font-sans);
             font-size: 0.95rem;
             outline: none;
+            box-shadow: var(--card-inner-highlight);
             transition: all 0.2s ease;
 
             &::placeholder {
@@ -213,12 +231,13 @@
 
             &:focus {
               border-color: var(--accent-cyan);
-              box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+              box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15), var(--card-inner-highlight);
             }
           }
 
           textarea {
             resize: vertical;
+            min-height: 120px;
           }
         }
 
@@ -251,32 +270,41 @@
 
         .error-icon {
           font-size: 1.1rem;
-          margin-top: 2px;
           flex-shrink: 0;
+          margin-top: 2px;
         }
 
-        .error-fallback-link {
+        p {
+          line-height: 1.45;
+        }
+
+        .fallback-mailto {
           display: inline-block;
-          margin-top: 4px;
-          color: var(--accent-cyan);
-          text-decoration: underline;
+          margin-top: 6px;
+          color: #ffffff;
           font-weight: 600;
+          text-decoration: underline;
+
+          &:hover {
+            color: var(--accent-cyan);
+          }
         }
       }
 
-      .form-success-banner {
+      .form-success-state {
+        text-align: center;
+        padding: 36px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        padding: 30px 20px;
         gap: 14px;
 
-        .success-icon-wrap {
+        .success-icon-wrapper {
           width: 56px;
           height: 56px;
           border-radius: 50%;
           background: rgba(16, 185, 129, 0.15);
+          border: 1px solid rgba(16, 185, 129, 0.3);
           color: #10b981;
           display: flex;
           align-items: center;
@@ -284,31 +312,44 @@
           font-size: 1.6rem;
         }
 
-        h4 {
-          font-size: 1.4rem;
+        .success-title {
+          font-size: 1.3rem;
+          font-weight: 800;
           color: var(--text-primary);
         }
 
-        p {
+        .success-text {
           font-size: 0.95rem;
           color: var(--text-secondary);
-          max-width: 400px;
-          line-height: 1.5;
+          line-height: 1.6;
+          max-width: 380px;
         }
       }
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .contact-section {
     .contact-grid {
       grid-template-columns: 1fr;
-    }
-
-    .contact-form-wrapper .contact-form-card .contact-form .form-row {
-      grid-template-columns: 1fr;
+      gap: 32px;
     }
   }
 }
 
+@media (max-width: 600px) {
+  .contact-section {
+    .contact-form-wrapper {
+      .contact-form-card {
+        padding: 24px;
+
+        .contact-form {
+          .form-row {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+}
