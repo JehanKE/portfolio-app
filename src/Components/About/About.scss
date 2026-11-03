@@ -84,11 +84,16 @@
           color: var(--text-primary);
           line-height: 1.4;
 
-          .check-icon {
-            color: var(--accent-emerald);
-            font-size: 0.9rem;
-            margin-top: 3px;
+          .bullet-icon {
+            color: var(--accent-cyan);
+            font-size: 0.75rem;
+            margin-top: 4px;
             flex-shrink: 0;
+            transition: transform 0.2s ease;
+          }
+
+          &:hover .bullet-icon {
+            transform: translateX(3px);
           }
         }
       }
@@ -129,14 +134,7 @@
         font-size: 1.2rem;
       }
     }
-
-    .personality-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-    }
-
+    
     .personality-text {
       font-size: 0.95rem;
       color: var(--text-secondary);

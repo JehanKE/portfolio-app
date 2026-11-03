@@ -4,7 +4,7 @@ import {
   FaServer,
   FaChartLine,
   FaUsersCog,
-  FaCheck,
+  FaChevronRight,
   FaLightbulb,
   FaTerminal
 } from 'react-icons/fa';
@@ -50,7 +50,7 @@ const About = () => {
     <section id="about" className="section about-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">01 // Architecture & Leadership</span>
+          <span className="section-tag">Architecture & Leadership</span>
           <h2 className="section-title">
             Transforming Ambiguity into <span className="gradient-text">Scalable Systems</span>
           </h2>
@@ -78,7 +78,7 @@ const About = () => {
                 <ul className="highlights-list">
                   {highlights.map((item, idx) => (
                     <li key={idx}>
-                      <FaCheck className="check-icon" />
+                      <FaChevronRight className="bullet-icon" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -92,9 +92,8 @@ const About = () => {
                 <span className="personality-badge">
                   <FaLightbulb /> Beyond the IDE
                 </span>
-                <span className="sneaker-emoji">👟 🏀 ⚡</span>
+                <span className="sneaker-emoji">👟 ⚽ ⚡</span>
               </div>
-              <h4 className="personality-title">The "Outgoing Geek" Persona</h4>
               <p className="personality-text">
                 A sneaker craze, a sports addiction, and a genuine obsession for cutting-edge software make me part of a rare breed of outgoing geeks. Competitive, driven, and continuously learning, I thrive in collaborative high-ownership teams and love turning complex challenges into clean, elegant solutions.
               </p>

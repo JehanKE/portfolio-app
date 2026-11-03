@@ -10,8 +10,6 @@ export const personalInfo = {
   socials: {
     linkedin: "https://www.linkedin.com/in/jehan-engineer-9a0b401b0/",
     github: "https://github.com/JehanKE",
-    twitter: "https://twitter.com/JehanKE",
-    instagram: "https://www.instagram.com/jehan_ke/",
     email: "mailto:jehanke8@gmail.com"
   },
   summary: `Senior Software Engineer with 5 years of full-stack experience at Lowe's India building scalable enterprise web applications, microservices, and distributed systems using React, JavaScript, Spring Boot and Java. Strong in designing high-volume frontend architectures, event-driven data pipelines, and maintainable APIs with a focus on reliability, performance, and cost efficiency. Comfortable owning complex systems end to end, from technical design, development and code reviews to automated testing, production observability, and integrating LLM capabilities into developer workflows.`,
