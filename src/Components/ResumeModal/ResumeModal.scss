@@ -1,0 +1,329 @@
+.resume-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.25s ease-out;
+
+  .resume-modal-wrapper {
+    background: #ffffff;
+    color: #111827;
+    width: 100%;
+    max-width: 900px;
+    max-height: 92vh;
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: scaleUp 0.25s ease-out;
+
+    .resume-modal-toolbar {
+      background: #111827;
+      color: #f9fafb;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #374151;
+
+      .toolbar-info {
+        display: flex;
+        flex-direction: column;
+
+        .doc-title {
+          font-family: var(--font-mono);
+          font-size: 0.9rem;
+          font-weight: 700;
+          color: #38bdf8;
+        }
+
+        .doc-meta {
+          font-size: 0.75rem;
+          color: #9ca3af;
+        }
+      }
+
+      .toolbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .modal-close-btn {
+          background: none;
+          border: none;
+          color: #9ca3af;
+          font-size: 1.25rem;
+          cursor: pointer;
+          padding: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    /* Scrollable Canvas */
+    .resume-document {
+      overflow-y: auto;
+      padding: 40px 48px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      line-height: 1.35;
+      color: #000000;
+      background: #ffffff;
+
+      .doc-header {
+        text-align: center;
+        margin-bottom: 14px;
+
+        .doc-name {
+          font-size: 20pt;
+          font-weight: bold;
+          letter-spacing: 0.5px;
+          margin-bottom: 2px;
+          color: #002e6e;
+        }
+
+        .doc-role {
+          font-size: 12pt;
+          font-weight: bold;
+          margin-bottom: 4px;
+          color: #333333;
+        }
+
+        .doc-contact-line {
+          font-size: 9.5pt;
+          color: #444444;
+
+          .sep {
+            margin: 0 6px;
+          }
+
+          a {
+            color: #0044aa;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .doc-section {
+        margin-bottom: 14px;
+
+        .doc-sec-title {
+          font-size: 10.5pt;
+          font-weight: bold;
+          letter-spacing: 0.5px;
+          color: #002e6e;
+          border-bottom: 1.5px solid #002e6e;
+          padding-bottom: 2px;
+          margin-bottom: 6px;
+          text-transform: uppercase;
+        }
+
+        .doc-sec-body {
+          font-size: 9.5pt;
+          text-align: justify;
+          margin-bottom: 4px;
+        }
+
+        .doc-skills-table {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+
+          .skill-row {
+            font-size: 9.5pt;
+            display: grid;
+            grid-template-columns: 140px 1fr;
+
+            .skill-cat {
+              font-weight: bold;
+            }
+
+            .skill-vals {
+              color: #222222;
+            }
+          }
+        }
+
+        /* Experience */
+        .doc-exp-item {
+          margin-bottom: 10px;
+
+          .exp-line-1 {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 10pt;
+
+            .exp-dates {
+              font-size: 9pt;
+            }
+          }
+
+          .exp-line-2 {
+            font-weight: bold;
+            font-size: 9.5pt;
+            font-style: italic;
+            margin-bottom: 4px;
+          }
+        }
+
+        /* Projects */
+        .doc-project-item {
+          margin-bottom: 8px;
+
+          .project-title-row {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 9.5pt;
+            margin-bottom: 2px;
+
+            .p-link {
+              font-size: 9pt;
+              color: #0044aa;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        /* Education */
+        .doc-edu-item {
+          font-size: 9.5pt;
+
+          .edu-title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 4px;
+          }
+        }
+
+        .doc-bullets {
+          margin: 0;
+          padding-left: 20px;
+          font-size: 9.2pt;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          li {
+            line-height: 1.3;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .resume-document,
+  .resume-document * {
+    visibility: visible;
+  }
+  .resume-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    padding: 0;
+  }
+  .resume-modal-wrapper {
+    box-shadow: none;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .resume-modal-toolbar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .resume-modal-overlay {
+    padding: 8px;
+
+    .resume-modal-wrapper {
+      max-height: 96vh;
+      border-radius: 12px;
+
+      .resume-modal-toolbar {
+        padding: 10px 16px;
+
+        .toolbar-info .doc-meta {
+          display: none;
+        }
+
+        .toolbar-actions .print-btn {
+          display: none;
+        }
+      }
+
+      .resume-document {
+        padding: 24px 16px;
+        font-size: 9.5pt;
+
+        .doc-header {
+          .doc-name {
+            font-size: 16pt;
+          }
+
+          .doc-role {
+            font-size: 11pt;
+          }
+
+          .doc-contact-line {
+            flex-wrap: wrap;
+            gap: 4px;
+            font-size: 8.5pt;
+          }
+        }
+
+        .doc-section .doc-skills-table .skill-row {
+          grid-template-columns: 1fr;
+          gap: 2px;
+          margin-bottom: 6px;
+        }
+
+        .doc-exp-item .exp-line-1 {
+          flex-direction: column;
+          gap: 2px;
+        }
+      }
+    }
+  }
+}
+
