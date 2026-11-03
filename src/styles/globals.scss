@@ -90,6 +90,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -334,8 +335,12 @@ body {
 
 /* Responsive utilities */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
   .section {
-    padding: 72px 0;
+    padding: 68px 0;
   }
 
   .section-header {
@@ -352,5 +357,39 @@ body {
 
   .container {
     padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+
+    .section-tag {
+      font-size: 0.7rem;
+      padding: 5px 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 0.92rem;
+    }
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .btn {
+    padding: 11px 18px;
+    font-size: 0.88rem;
   }
 }

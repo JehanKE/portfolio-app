@@ -274,11 +274,43 @@
 
 @media (max-width: 640px) {
   .resume-modal-overlay {
-    padding: 10px;
+    padding: 8px;
 
     .resume-modal-wrapper {
+      max-height: 96vh;
+      border-radius: 12px;
+
+      .resume-modal-toolbar {
+        padding: 10px 16px;
+
+        .toolbar-info .doc-meta {
+          display: none;
+        }
+
+        .toolbar-actions .print-btn {
+          display: none;
+        }
+      }
+
       .resume-document {
-        padding: 24px 18px;
+        padding: 24px 16px;
+        font-size: 9.5pt;
+
+        .doc-header {
+          .doc-name {
+            font-size: 16pt;
+          }
+
+          .doc-role {
+            font-size: 11pt;
+          }
+
+          .doc-contact-line {
+            flex-wrap: wrap;
+            gap: 4px;
+            font-size: 8.5pt;
+          }
+        }
 
         .doc-section .doc-skills-table .skill-row {
           grid-template-columns: 1fr;
@@ -288,11 +320,8 @@
 
         .doc-exp-item .exp-line-1 {
           flex-direction: column;
+          gap: 2px;
         }
-      }
-
-      .resume-modal-toolbar .toolbar-actions .print-btn {
-        display: none;
       }
     }
   }

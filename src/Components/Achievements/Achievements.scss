@@ -4,7 +4,7 @@
 
   .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
 
     .achievement-card {
@@ -114,6 +114,35 @@
   .achievements-section {
     .achievements-grid {
       grid-template-columns: 1fr;
+      gap: 16px;
+
+      .achievement-card {
+        padding: 20px 16px;
+        gap: 14px;
+        border-radius: 14px;
+
+        .achievement-icon-box {
+          width: 44px;
+          height: 44px;
+          font-size: 1.2rem;
+          border-radius: 11px;
+        }
+
+        .achievement-content {
+          .achievement-title {
+            font-size: 1.05rem;
+          }
+
+          .achievement-org {
+            font-size: 0.82rem;
+          }
+
+          .achievement-desc {
+            font-size: 0.88rem;
+            line-height: 1.55;
+          }
+        }
+      }
     }
   }
 }

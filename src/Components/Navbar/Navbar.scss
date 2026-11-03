@@ -302,6 +302,86 @@
     .navbar-actions {
       .mobile-toggle-btn {
         display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .mobile-drawer {
+      max-height: calc(100vh - 65px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 0;
+
+    .navbar-container {
+      padding: 0 16px;
+    }
+
+    .navbar-brand {
+      gap: 10px;
+
+      .brand-badge {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
+
+      .brand-info {
+        .brand-name {
+          font-size: 0.95rem;
+        }
+
+        .brand-status {
+          display: none;
+        }
+      }
+    }
+
+    .navbar-actions {
+      gap: 8px;
+
+      .resume-nav-btn {
+        display: none;
+      }
+
+      .theme-toggle-btn,
+      .mobile-toggle-btn {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    .mobile-drawer {
+      .mobile-drawer-content {
+        padding: 16px 20px;
+
+        .mobile-drawer-footer {
+          flex-direction: column;
+          gap: 16px;
+          align-items: stretch;
+
+          .mobile-resume-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 11px;
+          }
+
+          .mobile-socials {
+            justify-content: center;
+            gap: 20px;
+
+            .mobile-social-icon {
+              font-size: 1.35rem;
+              padding: 6px;
+            }
+          }
+        }
       }
     }
   }

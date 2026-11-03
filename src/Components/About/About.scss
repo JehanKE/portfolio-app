@@ -240,3 +240,73 @@
     }
   }
 }
+
+@media (max-width: 640px) {
+  .about-section {
+    .narrative-card {
+      padding: 22px 18px;
+
+      .narrative-heading {
+        font-size: 1.15rem;
+      }
+
+      .narrative-text {
+        font-size: 0.93rem;
+        line-height: 1.68;
+      }
+
+      .narrative-highlights {
+        margin-top: 18px;
+        padding-top: 16px;
+
+        .highlights-list li {
+          font-size: 0.88rem;
+          padding: 6px 0;
+        }
+      }
+    }
+
+    .personality-card {
+      padding: 18px 20px;
+
+      .personality-header {
+        .personality-badge {
+          font-size: 0.72rem;
+        }
+        .sneaker-emoji {
+          font-size: 1.1rem;
+        }
+      }
+
+      .personality-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+    }
+
+    .about-pillars {
+      .pillar-card {
+        padding: 18px 16px;
+        gap: 14px;
+
+        .pillar-icon-box {
+          width: 40px;
+          height: 40px;
+          font-size: 1.05rem;
+          border-radius: 10px;
+        }
+
+        .pillar-content {
+          .pillar-title {
+            font-size: 1rem;
+          }
+
+          .pillar-desc {
+            font-size: 0.88rem;
+            line-height: 1.58;
+          }
+        }
+      }
+    }
+  }
+}
